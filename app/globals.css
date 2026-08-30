@@ -47,6 +47,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-marquee: marquee 10s linear infinite;
 }
 
 :root {
@@ -61,9 +62,9 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: #273468;
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --muted: #5abfbd;
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #5abfbd;
+  --accent: #72efdd;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -120,6 +121,14 @@
   --sidebar-ring: oklch(0.556 0 0);
 } */
 
+@keyframes marquee {
+  0%{
+    transform:translateX(0) ;
+  }
+  100%{
+    transform: translateX(50%)
+  }
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -130,5 +139,14 @@
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+  }
+}
+@layer components{
+  .section-title{
+    font-size: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    
   }
 }

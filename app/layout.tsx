@@ -4,7 +4,6 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/navbar";
 import Particles from "@/components/ui/Particles";
-import GlowCursor from "@/components/ui/GlowCursor";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
@@ -34,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "font-sans",
         inter.variable,
       )}>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col min-w-0 overflow-x-hidden">
         <Navbar />
         <div
           style={{
@@ -56,7 +55,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             pixelRatio={1}
           />
         </div>
-          {children}
+         
+         <main className="flex flex-1 min-w-0 items-center justify-center ">{children}</main>
        
       </body>
     </html>

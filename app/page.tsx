@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col min-w-0 items-center justify-center">
     <section id="home"><Hero/></section>
    <section id="about"><About/></section>
    <section id="projects"><Projects/></section> 

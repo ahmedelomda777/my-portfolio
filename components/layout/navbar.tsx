@@ -14,7 +14,6 @@ export default function Navbar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-          console.log("active:", entry.target.id); // ← ضيف السطر ده
             setActiveSection(`#${entry.target.id}`);
           }
         });
@@ -27,7 +26,7 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  return (
+  return ( 
     <nav className="sticky z-50 top-1 w-9/10 m-auto mt-5 mb-5 p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl">
       <ul className="flex items-center justify-around list-none">
         {navData.map((n) => {

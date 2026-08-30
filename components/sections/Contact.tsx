@@ -1,9 +1,9 @@
-import React from 'react'
-
+import * as zod from "zod";
 export default function Contact() {
+  
   return (
-    <div id='contact' className='h-dvh'>
-   Contact
+    <div >
+   
       </div>
   )
 }
