@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/navbar";
 import Particles from "@/components/ui/Particles";
+import Footer from "@/components/layout/footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
@@ -33,9 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "font-sans",
         inter.variable,
       )}>
-      <body className="min-h-full flex flex-col min-w-0 overflow-x-hidden">
+      <body className="min-h-full flex flex-col overflow-x-hidden">
         <Navbar />
-        <div
+                 <div
           style={{
             width: "100%",
             height: "100dvh",
@@ -55,9 +56,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             pixelRatio={1}
           />
         </div>
-         
-         <main className="flex flex-1 min-w-0 items-center justify-center ">{children}</main>
-       
+         <main className="flex flex-1 min-w-0 items-center justify-center ">
+        
+          {children}
+          </main>
+       <Footer/>
       </body>
     </html>
   );

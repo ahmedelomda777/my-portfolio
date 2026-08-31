@@ -11,11 +11,11 @@ export default function Hero() {
     <div>
       <div className="w-9/10 m-auto flex items-center justify-around gap-50 mt-20">
         <motion.div
-          initial={{ right: 100, opacity: 0 }}
-          whileInView={{ right: 0, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="relative w-fit flex flex-col gap-6 ">
+          className="w-fit flex flex-col gap-6 ">
           <div className="group relative top-0 w-130 m-auto h-15 cursor-pointer ">
             <h1>
               <span
@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
           <Button asChild className="bg-primary w-30 m-auto">
             <a
-              href="https://drive.google.com/file/d/1hdokvc-C6Sip_jzTyRovEKdBJ_lSawNp/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Nc4hGrwg0tQO5wgpQHMlsKAmF8n7Br7D/view?usp=drive_link"
               target="_blank">
               <SiGoogledrive />
               View CV
@@ -42,11 +42,11 @@ export default function Hero() {
           </Button>
         </motion.div>
         <motion.div
-          initial={{ left: 100, opacity: 0 }}
-          whileInView={{ left: 0, opacity: 1 }}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-1/3 relative">
+          className="w-1/3">
           <Image
             src={myPhoto}
             className="w-100 rounded-2xl aspect-auto"

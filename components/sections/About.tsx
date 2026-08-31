@@ -9,11 +9,11 @@ export default function About() {
     <div className="">
       <div className="w-full ">
         <motion.div
-          initial={{ top: -50, opacity: 0 }}
-          whileInView={{ top: 0, opacity: 1 }}
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 1, margin: "-50px" }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className=" w-9/10 m-auto relative flex flex-col min-w-0 gap-3">
+          className=" w-9/10 m-auto flex flex-col min-w-0 gap-3">
           <h3 className="text-3xl flex min-w-0 items-center gap-3">
             Hello I&apos;m
             <SplitFlapText
@@ -42,11 +42,11 @@ export default function About() {
           </p>
         </motion.div>
         <motion.div
-          initial={{ top: -50, opacity: 0 }}
-          whileInView={{ top: 0, opacity: 1 }}
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ amount: 1, margin: "-50px", once: true }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="relative group/marquee w-2/3 m-auto mt-20 flex flex-col min-w-0 gap-8 overflow-hidden">
+          className="group/marquee w-2/3 m-auto mt-20 flex flex-col min-w-0 gap-8 overflow-hidden">
           <h3 className="section-title">
             my skills
           </h3>
@@ -55,7 +55,7 @@ export default function About() {
               <div
                 key={index}
                 className="group/skills relative w-20 gap-10 shrink-0 flex justify-center">
-                <skill.icon className="w-10 h-10 text-muted aspect-auto" />
+                <skill.icon className="w-12 h-12 text-muted aspect-auto" />
                 <Badge
                   variant={"secondary"}
                   className="hidden absolute -top-3/4  mt-2 whitespace-nowrap text-primary-text group-hover/skills:block">
