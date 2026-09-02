@@ -9,7 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {motion} from "motion/react"; 
-import { tr } from "motion/react-client";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -33,7 +32,7 @@ export default function ProjectCard({
     <motion.div initial={{opacity:0,x: dir==="left"?-50:dir==="right"?50:0,y:dir==="top"?50:0}} whileInView={{opacity:1,x:0,y:0}} viewport={{amount:0.5,once:true,margin:dir==="top"?"50px":""}} transition={{ease:"easeOut",duration:0.5,}}>
       <Card
         key={project.name}
-        className='relative transition-transform hover:shadow-accent shadow-lg hover:scale-105  ease-out duration-300 mx-auto w-full p-5 bg-card'>
+        className='relative transition-transform hover:shadow-[0px_0px_15px_1px_var(--accent)] hover:scale-105  ease-out duration-300 mx-auto w-full p-5 bg-card'>
         <div className="absolute inset-0 z-30 aspect-video " />
         <Image
           src={project.image}

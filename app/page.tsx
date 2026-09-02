@@ -9,7 +9,7 @@ export default function Home() {
     <section id="home"><Hero/></section>
     <section id="about"><About/></section>
     <section id="projects"><Projects/></section> 
-    <section id="contact"><Contact/></section>  
+    <section id="contact" className="w-full "><Contact/></section>  
 
     </div>
   );

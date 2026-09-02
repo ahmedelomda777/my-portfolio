@@ -1,13 +1,14 @@
 import { HomeIcon, User, LayoutDashboard, Mail } from "lucide-react";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoJavascript, } from "react-icons/io";
-import { FaReact, FaBootstrap,FaCss3,FaSass,FaGithub ,FaFacebook, FaLinkedin} from "react-icons/fa";
+import { FaReact, FaBootstrap,FaCss3,FaSass,FaGithub ,FaFacebook, FaLinkedin, FaWhatsapp} from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import { TbBrandTypescript,TbBrandNextjs } from "react-icons/tb";
+import { TbBrandTypescript,TbBrandNextjs, } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import vuImg from "@/assets/images/vu-platform.png";
 import autoImg from "@/assets/images/autopilot-website.png";
 import findStateImg from "@/assets/images/findstate.png";
+import { CiLocationOn } from "react-icons/ci";
 
 
 export const navData = [
@@ -125,3 +126,20 @@ export const links=[
   }
   
 ]
+export const contact=[
+  {
+    title:"email",
+    icon:Mail,
+    content:"ahmedabs777@gmail.com",
+  },
+  {    
+    title:"number",
+    icon:FaWhatsapp,
+    content:"01069160736",
+  },
+  {     
+    title:"location",
+    icon:CiLocationOn,
+    content:"egypt/daqahlia",
+  }
+] 

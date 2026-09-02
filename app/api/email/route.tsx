@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { Receiver } from '@/components/receiver';
+import { Receiver } from '@/components/ui/receiver';
 import { NextRequest, NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: NextRequest) {

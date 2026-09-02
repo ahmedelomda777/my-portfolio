@@ -58,7 +58,7 @@ export default function About() {
                 <skill.icon className="w-12 h-12 text-muted aspect-auto" />
                 <Badge
                   variant={"secondary"}
-                  className="hidden absolute -top-3/4  mt-2 whitespace-nowrap text-primary-text group-hover/skills:block">
+                  className="hidden absolute -top-3/4  mt-2 whitespace-nowrap text-white group-hover/skills:block">
                   {skill.label}
                 </Badge>
               </div>
