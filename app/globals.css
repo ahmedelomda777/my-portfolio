@@ -134,7 +134,8 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-primary-text;
+    @apply bg-background text-primary-text selection:text-white selection:bg-muted;
+
   }
   html {
     @apply font-sans;
