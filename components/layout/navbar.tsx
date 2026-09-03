@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { navData } from "@/data/data";
-
+import {motion} from "motion/react";
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("/");
 
@@ -27,7 +27,10 @@ export default function Navbar() {
   }, []);
 
   return ( 
-    <nav className="sticky z-50 top-1 w-9/10 m-auto mt-5 mb-5 p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl">
+    <motion.nav  initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }} className="sticky z-50 top-1 w-9/10 m-auto mt-5 mb-5 p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl">
       <ul className="flex items-center justify-around list-none">
         {navData.map((n) => {
           const isActive = activeSection === n.href;
@@ -44,6 +47,6 @@ export default function Navbar() {
           );
         })}
       </ul>
-    </nav>
+    </motion.nav>
   );
 }

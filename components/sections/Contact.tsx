@@ -4,7 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "../ui/button";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import {contact} from "@/data/data"
+import {contact} from "@/data/data";
+import {motion} from "motion/react"
 export default function Contact() {
   const inputClass =
     "bg-input p-4 rounded-xl w-80 focus:outline focus:outline-accent text-accent placeholder:text-primary-text placeholder:opacity-70 ";
@@ -44,7 +45,12 @@ export default function Contact() {
     <div className="w-full">
       <h3 className="section-title">contact with me</h3>
       <div className="flex m-auto w-4/5 justify-evenly">
-        <form className="flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
+        <motion.form 
+             initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col">
             <label htmlFor="name" className="capitalize text-xl">
               name
@@ -104,8 +110,12 @@ export default function Contact() {
             )}
           </Button>
           {isSubmitSuccessful && isSubmitSuccessful?<h5 className="capitalize text-green-300 text-shadow-[0px_0px_5px_var(--accent)] text-center">the message has been sent successfully.</h5>:null}
-        </form>
-        <div className="flex flex-col gap-5">
+        </motion.form>
+        <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }} className="flex flex-col gap-5">
           {contact.map((c)=>{
             return(
              <div className="flex items-center gap-5 hover:bg-muted hover:-translate-y-3 hover:shadow-[0px_0px_15px_1px_#72efdd] selection:bg-secondary hover:text-white duration-500 p-5 rounded-full" key={c.title}>
@@ -119,7 +129,7 @@ export default function Contact() {
              </div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

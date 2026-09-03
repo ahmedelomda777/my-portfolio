@@ -8,6 +8,10 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import vuImg from "@/assets/images/vu-platform.png";
 import autoImg from "@/assets/images/autopilot-website.png";
 import findStateImg from "@/assets/images/findstate.png";
+import nasaImg from "@/assets/images/nasa.png";
+import kasperImg from "@/assets/images/kasper.png";
+import weatherImg from "@/assets/images/weather.png";
+
 import { CiLocationOn } from "react-icons/ci";
 
 
@@ -90,6 +94,14 @@ export const projects=[
     langs:["html","css","typescript","react","next.js"],
     description:"An AI-powered virtual interview platform built with Next.js, TypeScript, and Tailwind CSS. Enables companies to post jobs and conduct AI-driven technical interviews with real-time eye & body tracking, while candidates apply, get interviewed, and receive instant AI-generated evaluation reports. Built collaboratively with a full team of frontend, UI/UX, and backend engineers.",
   }, 
+   {
+    name:"Weather",
+    image:weatherImg,
+    demoHref:"https://weather-seven-lac-96.vercel.app/",
+    githubHref:"https://github.com/ahmedelomda777/weather",
+    langs:["html","css","typescript","react","next.js"],
+    description:"A weather dashboard built with Next.js (App Router) and TypeScript, fetching live data from the OpenWeatherMap API. Features server-side data fetching, a custom loading skeleton, and a secure image proxy via a Next.js API route to keep the API key and third-party requests off the client. Styled with Tailwind CSS.",
+  }, 
   {
     name:"autopilot websites",
     image:autoImg,
@@ -105,6 +117,21 @@ export const projects=[
     githubHref:"https://github.com/ahmedelomda777/companyPortfolio",
     langs:["html","css"],
     description:"A responsive real estate landing page built with pure HTML & CSS, featuring a dark/light mode toggle and a working contact form powered by EmailJS. Fully optimized for all screen sizes.",
+  },
+   {
+    name:"nasa",
+    image:nasaImg,
+    demoHref:"https://nasa-woad-kappa.vercel.app/",
+    githubHref:"https://github.com/ahmedelomda777/nasa",
+    langs:["html","css","bootstrap"],
+    description:"landing page was designed and developed using HTML, CSS, and Bootstrap, with full Arabic language support (RTL) , with a focus on a seamless user experience and fast loading speeds.",
+  },{
+    name:"kasper",
+    image:kasperImg,
+    demoHref:"https://kasper-cyan.vercel.app/",
+    githubHref:"https://github.com/ahmedelomda777/kasper",
+    langs:["html","css"],
+    description:"Customize and develop a Landing Page (Template-based) using HTML/CSS, including Services, Portfolio and About sections, with a fully responsive design.",
   },
 
 ]

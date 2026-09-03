@@ -7,6 +7,7 @@ import Separative from "../ui/separative";
 export default function About() {
   return (
     <div className="">
+     <h3 className="section-title mb-10">about me</h3>
       <div className="w-full ">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
@@ -41,16 +42,16 @@ export default function About() {
             <Accent>Tailwind CSS</Accent>.
           </p>
         </motion.div>
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ amount: 1, margin: "-50px", once: true }}
-          transition={{ ease: "easeOut", duration: 0.5 }}
+        <div
           className="group/marquee w-2/3 m-auto mt-20 flex flex-col min-w-0 gap-8 overflow-hidden">
           <h3 className="section-title">
             my skills
           </h3>
-          <div className="flex -ml-250 w-max animate-marquee group-hover/marquee:paused">
+          <motion.div   
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ amount: 0.1, once: true }}
+          transition={{ ease: "easeOut", duration: 0.5 }} className="flex -ml-250 w-max animate-marquee group-hover/marquee:paused">
             {[...skills, ...skills].map((skill, index) => (
               <div
                 key={index}
@@ -63,8 +64,8 @@ export default function About() {
                 </Badge>
               </div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
             <Separative/>
     </div>
