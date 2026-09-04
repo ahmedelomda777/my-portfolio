@@ -87,16 +87,14 @@
 
 @keyframes marquee {
   0%{
-    transform:translateX(0) ;
+    transform:translateX(0%) ;
   }
   100%{
-    transform: translateX(50%)
+    transform: translateX(-50%);
   }
 }
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+ 
   body {
     @apply bg-background text-primary-text selection:text-white selection:bg-muted;
 
@@ -109,7 +107,7 @@
 }
 @layer components{
   .section-title{
-    font-size: 36px;
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
     text-align: center;
     text-transform: capitalize;
     font-weight: 700;

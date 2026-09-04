@@ -11,6 +11,8 @@ import findStateImg from "@/assets/images/findstate.png";
 import nasaImg from "@/assets/images/nasa.png";
 import kasperImg from "@/assets/images/kasper.png";
 import weatherImg from "@/assets/images/weather.png";
+import shoesImg from "@/assets/images/shoes.png";
+import kudzokaImg from "@/assets/images/kdzoka.png";
 
 import { CiLocationOn } from "react-icons/ci";
 
@@ -132,26 +134,22 @@ export const projects=[
     githubHref:"https://github.com/ahmedelomda777/kasper",
     langs:["html","css"],
     description:"Customize and develop a Landing Page (Template-based) using HTML/CSS, including Services, Portfolio and About sections, with a fully responsive design.",
+  },{
+    name:"shoes shop",
+    image:shoesImg,
+    demoHref:"https://evaluation2-seven.vercel.app/",
+    githubHref:"https://github.com/ahmedelomda777/evaluation2",
+    langs:["html","css"],
+    description:"A fully integrated multi-page e-commerce project for selling clothing and shoes, built entirely from scratch using HTML and CSS. It features multiple, consistent pages: Home (Hero Section, Categories, Featured Products, Promotions), Store, Product Details, Shopping Cart, and Checkout, and Final",
+  },{
+    name:"kudzoka",
+    image:kudzokaImg,
+    demoHref:"https://evaluation1-mu.vercel.app/",
+    githubHref:"https://github.com/ahmedelomda777/evaluation1",
+    langs:["html","css"],
+    description:"My first web",
   },
 
-]
-export const links=[
-  {
-    name:"github",
-    icon:FaGithub,
-    href:"https://github.com/ahmedelomda777"
-  }, 
-  {
-    name:"linkedin",
-    icon:FaLinkedin,
-    href:"https://www.linkedin.com/in/ahmed-el-omda-6b1097253"
-  },
-  {
-    name:"facebook",
-    icon:FaFacebook,
-    href:"https://web.facebook.com/ahmed.el.omda.529140"
-  }
-  
 ]
 export const contact=[
   {
@@ -170,3 +168,38 @@ export const contact=[
     content:"egypt/daqahlia",
   }
 ] 
+ export const fields = [
+    {
+      name: "name",
+      type: "text",
+      placeholder: "Enter your name",
+    },
+    {
+      name: "email",
+      type: "email",
+      placeholder: "Enter your email",
+    },
+    {
+      name: "message",
+      type: "textarea",
+      placeholder: "Enter your message",
+    },
+  ]as const;
+  export const links=[
+  {
+    name:"github",
+    icon:FaGithub,
+    href:"https://github.com/ahmedelomda777"
+  }, 
+  {
+    name:"linkedin",
+    icon:FaLinkedin,
+    href:"https://www.linkedin.com/in/ahmed-el-omda-6b1097253"
+  },
+  {
+    name:"facebook",
+    icon:FaFacebook,
+    href:"https://web.facebook.com/ahmed.el.omda.529140"
+  }
+  
+]

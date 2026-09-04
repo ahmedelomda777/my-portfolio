@@ -6,8 +6,8 @@ import Separative from "../ui/separative";
 import SplitText from "../ui/splitText";
 export default function Hero() {
    return (
-    <div>
-      <div className="w-9/10 m-auto flex items-center justify-around gap-50 mt-20">
+    <div className="w-full">
+      <div className="w-4/5 m-auto flex items-center justify-between mt-20">
         <SplitText/>
         <motion.div
           initial={{ x: 100, opacity: 0 }}
@@ -17,8 +17,11 @@ export default function Hero() {
           className="w-1/3">
           <Image
             src={myPhoto}
-            className="w-100 rounded-2xl aspect-auto"
+            className="rounded-2xl h-auto w-full object-cover min-w-30 max-w-80"
             alt="my photo"
+            width={600}
+            height={800}
+
           />
         </motion.div>
       </div>

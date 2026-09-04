@@ -36,7 +36,7 @@ export default function Navbar() {
           const isActive = activeSection === n.href;
           return (
             <li
-              className={`hover:text-muted duration-200 ${isActive ? "border-b-2 border-primary pb-2 hover:text-primary-text" : ""}`}
+              className={`hover:text-muted duration-200 text-xs sm:text-sm md:text-base ${isActive ? "border-b-2 border-primary pb-2 hover:text-primary-text" : ""}`}
               key={n.name}
             >
               <a className="flex items-center gap-2" href={n.href}>

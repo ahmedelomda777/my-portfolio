@@ -22,57 +22,56 @@ type Project = {
 };
 export default function ProjectCard({
   project,
-  dir,
 }: {
   project: Project;
-  dir: string;
 }) {
   const [isClamp, setIsClamp] = useState(false);
   return (
-    <motion.div initial={{opacity:0,x: dir==="left"?-50:dir==="right"?50:0,y:dir==="top"?50:0}} whileInView={{opacity:1,x:0,y:0}} viewport={{amount:0.5,once:true,margin:dir==="top"?"50px":""}} transition={{ease:"easeOut",duration:0.5,}}>
+    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} viewport={{amount:0.5,once:true}} transition={{ease:"easeOut",duration:0.5,}}>
       <Card
-        key={project.name}
-        className='relative transition-transform hover:shadow-[0px_0px_15px_1px_var(--accent)] hover:scale-105  ease-out duration-300 mx-auto w-full p-5 bg-card'>
+        className='relative transition-transform hover:-translate-y-2 ease-out duration-300 mx-auto w-full max-h-100 min-h-fit md:max-h-150 p-1.5 md:p-5 bg-card'>
         <div className="absolute inset-0 z-30 aspect-video " />
         <Image
           src={project.image}
           alt={project.name}
-          width={3000}
-          height={3000}
+          width={800}
+          height={600}
           className="relative z-20 aspect-video w-full object-cover rounded-2xl"
         />
-        <CardHeader className="w-full">
-          <CardTitle className="text-primary-text font-bold text-xl uppercase p-3 pl-0 line-clamp-2">
+        <CardHeader className="w-full min-h-40">
+          <CardTitle className="text-primary-text font-semibold md:font-bold text-sm sm:text-base md:text-lg xl:text-xl uppercase p-3 pl-0 line-clamp-2">
             {project.name}
           </CardTitle>
 
           <CardDescription
             onClick={() => setIsClamp(!isClamp)}
-            className={`w-full ${!isClamp ? "line-clamp-3" : "line-clamp-none"}`}>
+            className={`w-full text-[8px] sm:text-sm  ${!isClamp ? "line-clamp-3" : "line-clamp-none"}`}>
             {project.description}
           </CardDescription>
           <div className="flex flex-wrap gap-1 mt-2 min-h-10">
             {project.langs.map((lang, index) => (
               <Badge
                 variant={"ghost"}
-                className="text-sm text-primary-text font-medium hover:text-white capitalize"
+                className="text-[8px] italic md:text-sm text-primary-text font-medium hover:text-white capitalize"
                 key={index}>
                 {lang}
               </Badge>
             ))}
           </div>
         </CardHeader>
-        <CardFooter>
-          <Button variant={"link"} className="w-1/2">
-            <Link target="_blank" href={project.demoHref}>
-              Live Demo
-            </Link>
-          </Button>
-          <Button variant={"link"} className="w-1/2">
-            <Link target="_blank" href={project.githubHref}>
-              Github
-            </Link>
-          </Button>
+        <CardFooter className="pb-3">
+       <div className="absolute flex bottom-3 left-1/2 -translate-x-1/2 ">
+           <Button variant={"link"} className="w-1/2 text-[8px] md:text-xs">
+             <Link target="_blank" href={project.demoHref}>
+               Live Demo
+             </Link>
+           </Button>
+           <Button variant={"link"} className="w-1/2 text-[8px] md:text-xs">
+             <Link target="_blank" href={project.githubHref}>
+               Github
+             </Link>
+           </Button>
+       </div>
         </CardFooter>
       </Card>
     </motion.div>
