@@ -14,7 +14,7 @@ export default function About() {
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 1, margin: "-50px" }}
+          viewport={{ once: true, amount: "all"}}
           transition={{ ease: "easeOut", duration: 0.5 }}
           className=" w-4/5 md:w-2/3 m-auto flex flex-col min-w-0 gap-3">
           <h3 className="text-sm md:text-lg xl:text-3xl flex min-w-0 items-center gap-3">
