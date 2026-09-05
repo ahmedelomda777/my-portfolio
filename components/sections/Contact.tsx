@@ -49,7 +49,7 @@ export default function Contact() {
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col gap-5">
           {contact.map((c) => {
