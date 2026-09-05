@@ -34,7 +34,7 @@ export default function SplitText() {
       </button>
       <Button asChild className="bg-primary m-auto">
         <a
-          href="https://drive.google.com/file/d/1Nc4hGrwg0tQO5wgpQHMlsKAmF8n7Br7D/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1ivScHHvSaeMKEd_IqKFcTYdjXDOyODdo/view?usp=drive_link"
           target="_blank"
           className="text-xs md:text-sm">
           

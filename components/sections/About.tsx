@@ -1,8 +1,6 @@
 import SplitFlapText from "../ui/SplitFlapText";
 import Accent from "../ui/Accent";
-import { skills } from "@/data/data";
 import * as motion from "motion/react-client";
-import { Badge } from "../ui/badge";
 import Separative from "../ui/separative";
 import MarqueeSkills from "../ui/marqueeSkills";
 export default function About() {
